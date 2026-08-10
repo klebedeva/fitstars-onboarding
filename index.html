@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>FitStars — Onboarding</title>
+<link rel="stylesheet" href="css/tokens.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="app">
+
+  <!-- Screen 00 · node 19450:8464 · Intro / "Подписка оформлена" -->
+  <section class="screen is-active screen--intro" data-screen="00">
+    <div class="nav-bar">
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/a1b034c7-222b-47da-b9d4-ee590abe2691.svg" alt="FitStars" />
+    </div>
+
+    <div class="intro-content">
+      <img class="intro-mascot" src="https://www.figma.com/api/mcp/asset/adb002b6-f164-4ad1-8673-e130273af670.png" alt="" />
+      <div class="intro-card">
+        <h1>Подписка оформлена</h1>
+        <p>Теперь можно добавить возможности, которые помогут заниматься регулярнее</p>
+        <p>5 коротких вопросов</p>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next">Подобрать план</button>
+    </div>
+  </section>
+
+  <!-- Screen 01 · node 19450:8385 · "Что поможет не бросить занятия?" -->
+  <section class="screen" data-screen="01" data-total-steps="5" data-step="1">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="question">
+        <h1>Что поможет<br />не бросить занятия?</h1>
+      </div>
+
+      <div class="answers" data-answers>
+        <button class="button-chooser" data-value="plan" data-goto="02">План по дням</button>
+        <button class="button-chooser" data-value="challenges" data-goto="02-1">Челленджи и мотивация</button>
+        <button class="button-chooser" data-value="short-goals" data-goto="02-2">Короткие цели</button>
+        <button class="button-chooser" data-value="self" data-goto="02-3">Хочу выбирать самостоятельно</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen 02 · node 19450:8472 · Ответ 1.1 "Для планов по дням подойдут марафоны" -->
+  <section class="screen screen--branch" data-screen="02">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="branch-text">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/36381cd6-1b9a-4279-8ff8-68738b6e59c7.png" alt="" />
+        <h1>Для планов по дням подойдут <span class="accent">марафоны</span></h1>
+        <p>Каждый день открывается новая тренировка по заданному плану</p>
+      </div>
+
+      <div class="offer-card">
+        <p class="offer-title">Подходящие тебе</p>
+        <div class="marathon-carousel">
+          <div class="marathon-card">
+            <img class="marathon-card-img" src="https://www.figma.com/api/mcp/asset/1b844226-5d1a-4203-843d-b158760169d9.png" alt="" />
+            <div class="marathon-card-body">
+              <span class="badge badge--green">Скоро начнётся</span>
+              <p class="marathon-card-title">CHALLENGE 21</p>
+              <p class="marathon-card-date">1 мая 2025 – 24 мая 2025</p>
+              <div class="marathon-card-stats">
+                <span>Средний</span><span>·</span><span>1674 участвуют</span>
+              </div>
+            </div>
+          </div>
+          <div class="marathon-card">
+            <img class="marathon-card-img" src="https://www.figma.com/api/mcp/asset/1b844226-5d1a-4203-843d-b158760169d9.png" alt="" />
+            <div class="marathon-card-body">
+              <span class="badge badge--green">Скоро начнётся</span>
+              <p class="marathon-card-title">CHALLENGE 21</p>
+              <p class="marathon-card-date">1 мая 2025 – 24 мая 2025</p>
+              <div class="marathon-card-stats">
+                <span>Средний</span><span>·</span><span>1674 участвуют</span>
+              </div>
+            </div>
+          </div>
+          <div class="marathon-card">
+            <img class="marathon-card-img" src="https://www.figma.com/api/mcp/asset/1b844226-5d1a-4203-843d-b158760169d9.png" alt="" />
+            <div class="marathon-card-body">
+              <span class="badge badge--green">Скоро начнётся</span>
+              <p class="marathon-card-title">CHALLENGE 21</p>
+              <p class="marathon-card-date">1 мая 2025 – 24 мая 2025</p>
+              <div class="marathon-card-stats">
+                <span>Средний</span><span>·</span><span>1674 участвуют</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next" data-goto="03">Далее</button>
+    </div>
+  </section>
+
+  <!-- Screen 02.1 · node 19450:8551 · Ответ 1.2 "Для стимула подходят марафоны" -->
+  <section class="screen screen--branch" data-screen="02-1">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="branch-text">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/101a5fdf-4c9d-4e68-bf56-78a67f6ab109.png" alt="" />
+        <h1>Для стимула подходят <span class="accent">марафоны</span></h1>
+        <p>Каждый день открывается новая тренировка по заданному плану</p>
+      </div>
+
+      <div class="offer-card">
+        <p class="offer-title">Подходящие тебе</p>
+        <div class="marathon-carousel">
+          <div class="marathon-card">
+            <img class="marathon-card-img" src="https://www.figma.com/api/mcp/asset/ba2734e0-5af5-4f6b-994d-c4358b98a846.png" alt="" />
+            <div class="marathon-card-body">
+              <span class="badge badge--green">Скоро начнётся</span>
+              <p class="marathon-card-title">CHALLENGE 21</p>
+              <p class="marathon-card-date">1 мая 2025 – 24 мая 2025</p>
+              <div class="marathon-card-stats">
+                <span>Средний</span><span>·</span><span>1674 участвуют</span>
+              </div>
+            </div>
+          </div>
+          <div class="marathon-card">
+            <img class="marathon-card-img" src="https://www.figma.com/api/mcp/asset/ba2734e0-5af5-4f6b-994d-c4358b98a846.png" alt="" />
+            <div class="marathon-card-body">
+              <span class="badge badge--green">Скоро начнётся</span>
+              <p class="marathon-card-title">CHALLENGE 21</p>
+              <p class="marathon-card-date">1 мая 2025 – 24 мая 2025</p>
+              <div class="marathon-card-stats">
+                <span>Средний</span><span>·</span><span>1674 участвуют</span>
+              </div>
+            </div>
+          </div>
+          <div class="marathon-card">
+            <img class="marathon-card-img" src="https://www.figma.com/api/mcp/asset/ba2734e0-5af5-4f6b-994d-c4358b98a846.png" alt="" />
+            <div class="marathon-card-body">
+              <span class="badge badge--green">Скоро начнётся</span>
+              <p class="marathon-card-title">CHALLENGE 21</p>
+              <p class="marathon-card-date">1 мая 2025 – 24 мая 2025</p>
+              <div class="marathon-card-stats">
+                <span>Средний</span><span>·</span><span>1674 участвуют</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next" data-goto="03">Далее</button>
+    </div>
+  </section>
+
+  <!-- Screen 02.2 · node 19450:8630 · Ответ 1.3 "Для маленьких шагов подходят марафоны" -->
+  <section class="screen screen--branch" data-screen="02-2">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="branch-text">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/8591ee10-e808-47d2-bca6-9a609a19f2d3.png" alt="" />
+        <h1>Для маленьких шагов подходят <span class="accent">марафоны</span></h1>
+        <p>Марафоны идут по дням — проще начать и двигаться постепенно</p>
+      </div>
+
+      <div class="offer-card">
+        <p class="offer-title">Подходящие тебе</p>
+        <div class="marathon-carousel">
+          <div class="marathon-card">
+            <img class="marathon-card-img" src="https://www.figma.com/api/mcp/asset/6a146390-7e89-4a69-bfe4-4185f747d336.png" alt="" />
+            <div class="marathon-card-body">
+              <span class="badge badge--green">Скоро начнётся</span>
+              <p class="marathon-card-title">CHALLENGE 21</p>
+              <p class="marathon-card-date">1 мая 2025 – 24 мая 2025</p>
+              <div class="marathon-card-stats">
+                <span>Средний</span><span>·</span><span>1674 участвуют</span>
+              </div>
+            </div>
+          </div>
+          <div class="marathon-card">
+            <img class="marathon-card-img" src="https://www.figma.com/api/mcp/asset/6a146390-7e89-4a69-bfe4-4185f747d336.png" alt="" />
+            <div class="marathon-card-body">
+              <span class="badge badge--green">Скоро начнётся</span>
+              <p class="marathon-card-title">CHALLENGE 21</p>
+              <p class="marathon-card-date">1 мая 2025 – 24 мая 2025</p>
+              <div class="marathon-card-stats">
+                <span>Средний</span><span>·</span><span>1674 участвуют</span>
+              </div>
+            </div>
+          </div>
+          <div class="marathon-card">
+            <img class="marathon-card-img" src="https://www.figma.com/api/mcp/asset/6a146390-7e89-4a69-bfe4-4185f747d336.png" alt="" />
+            <div class="marathon-card-body">
+              <span class="badge badge--green">Скоро начнётся</span>
+              <p class="marathon-card-title">CHALLENGE 21</p>
+              <p class="marathon-card-date">1 мая 2025 – 24 мая 2025</p>
+              <div class="marathon-card-stats">
+                <span>Средний</span><span>·</span><span>1674 участвуют</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next" data-goto="03">Далее</button>
+    </div>
+  </section>
+
+  <!-- Screen 02.3 · node 19450:8709 · Ответ 1.4 "Даём свободу выбора" -->
+  <section class="screen screen--branch" data-screen="02-3">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="branch-text">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/5bb4254e-8dec-4181-aa72-ca29a6d5fb06.png" alt="" />
+        <h1>Даём свободу выбора</h1>
+        <p>В текущей подписке уже доступны тренировки и программы, которые можно выбирать самостоятельно</p>
+      </div>
+
+      <div class="offer-card">
+        <p class="offer-title">Подойдут для начала</p>
+        <div class="program-carousel">
+          <div class="program-card">
+            <img class="program-card-img" src="https://www.figma.com/api/mcp/asset/24bbf828-981a-483f-964b-b51d9fb23d21.png" alt="" />
+            <span class="badge badge--white program-card-tag-left">Медитации</span>
+            <span class="badge badge--green program-card-tag-right">Новое</span>
+            <div class="program-card-body">
+              <p class="program-card-title">Медитации</p>
+              <p class="program-card-desc">С Анастасией Заявистовской</p>
+              <div class="marathon-card-stats">
+                <span>Средний</span><span>·</span><span>164 проходят</span>
+              </div>
+            </div>
+          </div>
+          <div class="program-card">
+            <img class="program-card-img" src="https://www.figma.com/api/mcp/asset/1560555f-a97e-4e77-a965-293d777d5bc6.png" alt="" />
+            <span class="badge badge--white program-card-tag-left">Худеем легко</span>
+            <span class="badge badge--green program-card-tag-right">Новое</span>
+            <div class="program-card-body">
+              <p class="program-card-title">Худеем легко</p>
+              <p class="program-card-desc">Программа для начинающих</p>
+              <div class="marathon-card-stats">
+                <span>Средний</span><span>·</span><span>164 проходят</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next" data-goto="03">Далее</button>
+    </div>
+  </section>
+
+  <!-- Screen 03 · node 19450:8401 · "Что поможет восстановиться после рабочего дня?" -->
+  <section class="screen" data-screen="03" data-total-steps="5" data-step="1">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="question">
+        <h1>Что поможет восстановиться<br />после рабочего дня?</h1>
+      </div>
+
+      <div class="answers" data-answers>
+        <button class="button-chooser" data-value="sleep" data-goto="04">Хочу легко засыпать</button>
+        <button class="button-chooser" data-value="relax" data-goto="04-1">Расслабление после работы</button>
+        <button class="button-chooser" data-value="stress" data-goto="04-2">Избавиться от стресса</button>
+        <button class="button-chooser" data-value="workouts-only" data-goto="04-3">Пока только тренировки</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen 04 · node 19450:8734 · Ответ 2.1 "Подойдут медитации" -->
+  <section class="screen screen--branch" data-screen="04">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="branch-text">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/1119a548-305a-4689-9a25-854c11f78296.png" alt="" />
+        <h1>Подойдут <span class="accent">медитации</span></h1>
+        <p>Помогают расслабиться вечером и настроиться на отдых</p>
+      </div>
+
+      <div class="stats-card">
+        <p class="stats-card-title">За 8 недель практики в приложении у пользователей значимо снизились:</p>
+        <div class="stats-list">
+          <div class="stats-row">
+            <svg class="icon-down" viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 15H7M15 15V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>усталость днём</span>
+          </div>
+          <div class="stats-row">
+            <svg class="icon-down" viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 15H7M15 15V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>сонливость днём</span>
+          </div>
+          <div class="stats-row">
+            <svg class="icon-down" viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 15H7M15 15V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>напряжение перед сном</span>
+          </div>
+        </div>
+        <p class="stats-footnote">По исследованию PLOS ONE, 2021 · 263 участника</p>
+      </div>
+
+      <div class="offer-card">
+        <p class="offer-title">Подходящие тебе</p>
+        <div class="meditation-carousel">
+          <div class="meditation-card">
+            <img class="meditation-card-img" src="https://www.figma.com/api/mcp/asset/5b6c9731-a614-43eb-9ed8-94f60ea2ff4a.png" alt="" />
+            <div class="meditation-card-gradient"></div>
+            <div class="meditation-card-label">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Начинающий</span>
+            </div>
+          </div>
+          <div class="meditation-card">
+            <img class="meditation-card-img" src="https://www.figma.com/api/mcp/asset/cb9b2b4d-fc05-49de-8586-879428fc2047.png" alt="" />
+            <div class="meditation-card-gradient"></div>
+            <div class="meditation-card-label">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Спокойно уснуть</span>
+            </div>
+          </div>
+          <div class="meditation-card">
+            <img class="meditation-card-img" src="https://www.figma.com/api/mcp/asset/9e3a5dcb-b318-47e1-80ae-ece1e74a2109.png" alt="" />
+            <div class="meditation-card-gradient"></div>
+            <div class="meditation-card-label">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Расслабиться</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next" data-goto="05">Далее</button>
+    </div>
+  </section>
+
+  <!-- Screen 04.1 · node 19450:8873 · Ответ 2.2 "Подойдут медитации" -->
+  <section class="screen screen--branch" data-screen="04-1">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="branch-text">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/85a59dc0-1340-44af-b448-6f602b57c858.png" alt="" />
+        <h1>Подойдут <span class="accent">медитации</span></h1>
+        <p>По исследованиям прослушивание медитаций влияет на снижение кортизола</p>
+      </div>
+
+      <div class="stats-card">
+        <p class="stats-card-title">За 8 недель практики в приложении у пользователей значимо снизились:</p>
+        <div class="stats-list">
+          <div class="stats-row">
+            <svg class="icon-down" viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 15H7M15 15V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>усталость днём</span>
+          </div>
+          <div class="stats-row">
+            <svg class="icon-down" viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 15H7M15 15V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>сонливость днём</span>
+          </div>
+          <div class="stats-row">
+            <svg class="icon-down" viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 15H7M15 15V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>напряжение перед сном</span>
+          </div>
+        </div>
+        <p class="stats-footnote">По исследованию PLOS ONE, 2021 · 263 участника</p>
+      </div>
+
+      <div class="offer-card">
+        <p class="offer-title">Подходящие тебе</p>
+        <div class="meditation-carousel">
+          <div class="meditation-card">
+            <img class="meditation-card-img" src="https://www.figma.com/api/mcp/asset/e359d499-9d55-40b7-8265-bee4cfcb80f2.png" alt="" />
+            <div class="meditation-card-gradient"></div>
+            <div class="meditation-card-label">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Начинающий</span>
+            </div>
+          </div>
+          <div class="meditation-card">
+            <img class="meditation-card-img" src="https://www.figma.com/api/mcp/asset/b0f50287-2838-4aad-872e-db5969dfb737.png" alt="" />
+            <div class="meditation-card-gradient"></div>
+            <div class="meditation-card-label">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Спокойно уснуть</span>
+            </div>
+          </div>
+          <div class="meditation-card">
+            <img class="meditation-card-img" src="https://www.figma.com/api/mcp/asset/3e24f1f2-af49-4529-8b53-e5ed96d7e7f5.png" alt="" />
+            <div class="meditation-card-gradient"></div>
+            <div class="meditation-card-label">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Расслабиться</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next" data-goto="05">Далее</button>
+    </div>
+  </section>
+
+  <!-- Screen 04.2 · node 19450:8915 · Ответ 2.3 "Подойдут медитации" -->
+  <section class="screen screen--branch" data-screen="04-2">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="branch-text">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/ddf40662-1c02-415a-8ecd-7f055a70a397.png" alt="" />
+        <h1>Подойдут <span class="accent">медитации</span></h1>
+        <p>По исследованиям прослушивание медитаций влияет на снижение кортизола</p>
+      </div>
+
+      <div class="stats-card">
+        <p class="stats-card-title">За 8 недель практики в приложении у пользователей значимо снизились:</p>
+        <div class="stats-list">
+          <div class="stats-row">
+            <svg class="icon-down" viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 15H7M15 15V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>усталость днём</span>
+          </div>
+          <div class="stats-row">
+            <svg class="icon-down" viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 15H7M15 15V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>сонливость днём</span>
+          </div>
+          <div class="stats-row">
+            <svg class="icon-down" viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 15H7M15 15V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>напряжение перед сном</span>
+          </div>
+        </div>
+        <p class="stats-footnote">По исследованию PLOS ONE, 2021 · 263 участника</p>
+      </div>
+
+      <div class="offer-card">
+        <p class="offer-title">Подходящие тебе</p>
+        <div class="meditation-carousel">
+          <div class="meditation-card">
+            <img class="meditation-card-img" src="https://www.figma.com/api/mcp/asset/18789c03-6305-45d9-a2f5-4826c3a2f152.png" alt="" />
+            <div class="meditation-card-gradient"></div>
+            <div class="meditation-card-label">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Начинающий</span>
+            </div>
+          </div>
+          <div class="meditation-card">
+            <img class="meditation-card-img" src="https://www.figma.com/api/mcp/asset/32dc0af4-689b-4e9d-aad4-99fba62b72cc.png" alt="" />
+            <div class="meditation-card-gradient"></div>
+            <div class="meditation-card-label">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Спокойно уснуть</span>
+            </div>
+          </div>
+          <div class="meditation-card">
+            <img class="meditation-card-img" src="https://www.figma.com/api/mcp/asset/2c579db5-d42a-4450-8edb-d0260079510f.png" alt="" />
+            <div class="meditation-card-gradient"></div>
+            <div class="meditation-card-label">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Расслабиться</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next" data-goto="05">Далее</button>
+    </div>
+  </section>
+
+  <!-- Screen 04.3 · node 19450:8961 · Ответ 2.4 "Оставим фокус на движении" -->
+  <section class="screen screen--branch" data-screen="04-3">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="branch-text">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/e5072494-e4ae-4c7b-8dce-ff66813012c3.png" alt="" />
+        <h1>Оставим фокус на <span class="accent">движении</span></h1>
+        <p>Можно начать с тренировок в текущей подписке, а медитации попробовать позже</p>
+      </div>
+
+      <div class="offer-card">
+        <p class="offer-title">Избранные медитации</p>
+        <div class="meditation-carousel">
+          <div class="meditation-card">
+            <img class="meditation-card-img" src="https://www.figma.com/api/mcp/asset/16a0f2df-824f-491d-aeee-5244e42bc337.png" alt="" />
+            <div class="meditation-card-gradient"></div>
+            <div class="meditation-card-label">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Начинающий</span>
+            </div>
+          </div>
+          <div class="meditation-card">
+            <img class="meditation-card-img" src="https://www.figma.com/api/mcp/asset/2d5ed73d-fea2-4bc7-9fc6-418921e4ea30.png" alt="" />
+            <div class="meditation-card-gradient"></div>
+            <div class="meditation-card-label">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Спокойно уснуть</span>
+            </div>
+          </div>
+          <div class="meditation-card">
+            <img class="meditation-card-img" src="https://www.figma.com/api/mcp/asset/b2d4fccd-1ade-4fb5-9c9d-26bea372a6fc.png" alt="" />
+            <div class="meditation-card-gradient"></div>
+            <div class="meditation-card-label">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Расслабиться</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next" data-goto="05">Далее</button>
+    </div>
+  </section>
+
+  <!-- Screen 05 · node 19450:8417 · "Нужна помощь, если появятся вопросы по тренировкам?" -->
+  <section class="screen" data-screen="05" data-total-steps="5" data-step="1">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="question">
+        <h1>Нужна помощь, если появятся вопросы<br />по тренировкам?</h1>
+      </div>
+
+      <div class="answers" data-answers>
+        <button class="button-chooser" data-value="yes" data-goto="06">Да, хочу помощь</button>
+        <button class="button-chooser" data-value="sometimes" data-goto="06-1">Иногда может пригодиться</button>
+        <button class="button-chooser" data-value="no" data-goto="06-2">Нет, справлюсь</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen 06 · node 19450:8786 · Ответ 3.1 "Когда нужна помощь" -->
+  <section class="screen screen--branch" data-screen="06">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="branch-text">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/4b9b6965-4791-49f9-abe7-b1185cfb41c9.png" alt="" />
+        <h1>Когда нужна помощь</h1>
+        <p>Персональный ИИ-тренер подскажет по тренировкам, нагрузке и регулярности</p>
+      </div>
+
+      <div class="content" style="gap:12px; padding: 0 16px;">
+        <div class="ai-coach-card">
+          <div class="ai-coach-avatar"><img src="https://www.figma.com/api/mcp/asset/4b9b6965-4791-49f9-abe7-b1185cfb41c9.png" alt="" /></div>
+          <div class="ai-coach-body">
+            <span class="ai-coach-tag"><span>Персональный тренер</span> ✨</span>
+            <p class="ai-coach-text">Я помню твои цели, боли и любимые тренировки. Подскажу, если что-то непонятно</p>
+          </div>
+        </div>
+        <div class="stat-pill-card">
+          <span class="stat-pill-number">68%</span>
+          <p class="stat-pill-text">пользователей добились целей с нашим тренером</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next" data-goto="08">Далее</button>
+    </div>
+  </section>
+
+  <!-- Screen 06.1 · node 19450:8837 · Ответ 3.2 "Помощь под рукой" -->
+  <section class="screen screen--branch" data-screen="06-1">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="branch-text">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/ddbd10b9-20ca-4d5c-ac34-7e2df2d8ad9b.png" alt="" />
+        <h1>Помощь под рукой</h1>
+        <p>Персональный ИИ-тренер доступен в Премиуме — можно обратиться, когда понадобится подсказка</p>
+      </div>
+
+      <div class="content" style="gap:12px; padding: 0 16px;">
+        <div class="ai-coach-card">
+          <div class="ai-coach-avatar"><img src="https://www.figma.com/api/mcp/asset/ddbd10b9-20ca-4d5c-ac34-7e2df2d8ad9b.png" alt="" /></div>
+          <div class="ai-coach-body">
+            <span class="ai-coach-tag"><span>Персональный тренер</span> ✨</span>
+            <p class="ai-coach-text">Я помню твои цели, боли и любимые тренировки. Подскажу, если что-то непонятно</p>
+          </div>
+        </div>
+        <div class="stat-pill-card">
+          <span class="stat-pill-number">68%</span>
+          <p class="stat-pill-text">пользователей добились целей с нашим тренером</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next" data-goto="08">Далее</button>
+    </div>
+  </section>
+
+  <!-- Screen 06.2 · node 19450:8855 · Ответ 3.3 "Без лишней помощи" -->
+  <section class="screen screen--branch" data-screen="06-2">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="branch-text">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/83943312-0b99-4c22-a5e4-06acfe690d02.png" alt="" />
+        <h1>Без лишней помощи</h1>
+        <p>Тренировки можно выбирать самостоятельно, а ИИ-тренер будет под рукой, если появятся вопросы</p>
+      </div>
+
+      <div class="content" style="gap:12px; padding: 0 16px;">
+        <div class="ai-coach-card">
+          <div class="ai-coach-avatar"><img src="https://www.figma.com/api/mcp/asset/dec821d7-4d38-436f-b1ce-31d75849efbd.png" alt="" /></div>
+          <div class="ai-coach-body">
+            <span class="ai-coach-tag"><span>Персональный тренер</span> ✨</span>
+            <p class="ai-coach-text">Я помню твои цели, боли и любимые тренировки. Подскажу, если что-то непонятно</p>
+          </div>
+        </div>
+        <div class="stat-pill-card">
+          <span class="stat-pill-number">68%</span>
+          <p class="stat-pill-text">пользователей добились целей с нашим тренером</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next" data-goto="08">Далее</button>
+    </div>
+  </section>
+
+  <!-- Screen 08 · node 19450:8432 · "С кем ты будешь заниматься?" -->
+  <section class="screen" data-screen="08" data-total-steps="5" data-step="1">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="question">
+        <h1>С кем ты будешь заниматься?</h1>
+      </div>
+
+      <div class="answers" data-answers>
+        <button class="button-chooser" data-value="family" data-goto="09">С семьёй</button>
+        <button class="button-chooser" data-value="friends" data-goto="09-1">С друзьями</button>
+        <button class="button-chooser" data-value="solo" data-goto="10">В одиночку</button>
+        <button class="button-chooser" data-value="unsure" data-goto="10">Пока не знаю</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen 09 · node 19450:8982 · Ответ 4.1 "Для всей семьи" -->
+  <section class="screen screen--branch" data-screen="09">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="branch-text">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/054e0527-1269-471f-90ee-df5007af2e48.png" alt="" />
+        <h1>Для всей семьи</h1>
+        <p>Семейные профили позволяют каждому заниматься отдельно и сохранять свой прогресс</p>
+      </div>
+
+      <div class="family-profiles">
+        <div class="family-avatar"><img src="https://www.figma.com/api/mcp/asset/12c50568-f7d6-46bc-b9f2-ecbce3debc81.png" alt="" /><span>Я</span></div>
+        <div class="family-avatar"><img src="https://www.figma.com/api/mcp/asset/8a3e60e5-6eb2-4659-87fa-f89ae77fb593.png" alt="" /><span>Ребёнок</span></div>
+        <div class="family-avatar"><img src="https://www.figma.com/api/mcp/asset/ea3a6e4b-6fe7-4fb5-afb6-3f93a658593f.png" alt="" /><span>Муж</span></div>
+        <div class="family-avatar"><img src="https://www.figma.com/api/mcp/asset/43a381fb-a69f-4329-9d6d-1604290bf7bb.png" alt="" /><span>Мама</span></div>
+        <div class="family-avatar"><img src="https://www.figma.com/api/mcp/asset/90aab472-7186-40c2-beca-934621436a6f.png" alt="" /><span>Папа</span></div>
+      </div>
+
+      <div class="stat-note-card">
+        <div class="stat-note-icon">📈</div>
+        <div>
+          <p class="stat-note-text"><span class="accent">Почти в 2 раза чаще</span> продолжают заниматься те, кто тренируется вместе, а не в одиночку</p>
+          <p class="stat-note-source">по данным исследования J. Sports Med, 1995</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next" data-goto="10">Далее</button>
+    </div>
+  </section>
+
+  <!-- Screen 09.1 · node 19450:9035 · Ответ 4.2 "Для всех близких" -->
+  <section class="screen screen--branch" data-screen="09-1">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="branch-text">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/2990bce7-56d9-4237-b71b-fa6b63c1d70a.png" alt="" />
+        <h1>Для всех близких</h1>
+        <p>Семейные профили позволяют каждому заниматься отдельно и сохранять свой прогресс</p>
+      </div>
+
+      <div class="family-profiles">
+        <div class="family-avatar"><img src="https://www.figma.com/api/mcp/asset/8711c157-bd30-4675-aae3-65aeb982388d.png" alt="" /><span>Я</span></div>
+        <div class="family-avatar"><img src="https://www.figma.com/api/mcp/asset/e3abc3a8-cdbd-494e-ae62-9421956c5213.png" alt="" /><span>Подруга</span></div>
+        <div class="family-avatar"><img src="https://www.figma.com/api/mcp/asset/e00c680f-ab2c-49fd-81e8-19991e99652c.png" alt="" /><span>Сестра</span></div>
+        <div class="family-avatar"><img src="https://www.figma.com/api/mcp/asset/3fcab6dd-9913-4418-a506-5af318c9d57f.png" alt="" /><span>Друг</span></div>
+        <div class="family-avatar"><img src="https://www.figma.com/api/mcp/asset/73f88680-c49c-4a6c-b941-eb60d683612d.png" alt="" /><span>Коллега</span></div>
+      </div>
+
+      <div class="stat-note-card">
+        <div class="stat-note-icon">📈</div>
+        <div>
+          <p class="stat-note-text"><span class="accent">Почти в 2 раза чаще</span> продолжают заниматься те, кто тренируется вместе, а не в одиночку</p>
+          <p class="stat-note-source">по данным исследования J. Sports Med, 1995</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next" data-goto="10">Далее</button>
+    </div>
+  </section>
+
+  <!-- Screen 10 · node 19450:8448 · "Что упростит питание каждый день?" -->
+  <section class="screen" data-screen="10" data-total-steps="5" data-step="1">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="question">
+        <h1>Что упростит питание каждый день?</h1>
+      </div>
+
+      <div class="answers" data-answers>
+        <button class="button-chooser" data-value="recipes" data-goto="11">Подобрать полезные рецепты</button>
+        <button class="button-chooser" data-value="calories" data-goto="11-1">Понимать и следить за калориями</button>
+        <button class="button-chooser" data-value="nutritionist" data-goto="11-2">Помощь нутрициолога</button>
+        <button class="button-chooser" data-value="not-needed" data-goto="11-3">Пока не нужно</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen 11 · node 19450:9243 · Ответ 5.1 "Рецепты под цель" -->
+  <section class="screen screen--branch" data-screen="11">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="branch-text">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/552ead7c-19c0-4ae3-80d9-b8d1900100f8.png" alt="" />
+        <h1>Рецепты под цель</h1>
+        <p>Подбирай полезные блюда без лишнего поиска</p>
+      </div>
+
+      <div class="offer-card">
+        <p class="offer-title">100+ рецептов</p>
+        <div class="recipe-carousel">
+          <div class="recipe-card">
+            <div class="recipe-card-img-wrap">
+              <img class="recipe-card-img" src="https://www.figma.com/api/mcp/asset/05e59f9c-437e-4382-83af-058b1cc197e9.png" alt="" />
+              <span class="recipe-card-time">~ 12 минут</span>
+            </div>
+            <p class="recipe-card-title">Форель в сливочном соусе</p>
+            <p class="recipe-card-kcal">🔥 476 Ккал</p>
+          </div>
+          <div class="recipe-card">
+            <div class="recipe-card-img-wrap">
+              <img class="recipe-card-img" src="https://www.figma.com/api/mcp/asset/4c8b4665-c917-4cc5-8a83-efc162dfcddf.png" alt="" />
+              <span class="recipe-card-time">~ 12 минут</span>
+            </div>
+            <p class="recipe-card-title">Каша из булгура на молоке с фруктами</p>
+            <p class="recipe-card-kcal">🔥 476 Ккал</p>
+          </div>
+          <div class="recipe-card">
+            <div class="recipe-card-img-wrap">
+              <img class="recipe-card-img" src="https://www.figma.com/api/mcp/asset/48cf2652-5ef8-46b3-9f4b-6344fc09f851.png" alt="" />
+            </div>
+            <p class="recipe-card-title">Сладкая полента с тыквой</p>
+            <p class="recipe-card-kcal">🔥 476 Ккал</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next" data-goto="12">Далее</button>
+    </div>
+  </section>
+
+  <!-- Screen 11.1 · node 19450:9088 · Ответ 5.2 "Калории под контролем" -->
+  <section class="screen screen--branch" data-screen="11-1">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="branch-text">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/659e2ee7-6512-4485-8f67-b015e9a4461d.png" alt="" />
+        <h1>Калории под контролем</h1>
+        <p>Следи за питанием без таблиц и сложных подсчётов</p>
+      </div>
+
+      <div class="calorie-card">
+        <p class="calorie-card-title">Прогресс дня</p>
+        <div class="calorie-row">
+          <div class="calorie-ring"><span class="calorie-ring-value">75%</span></div>
+          <div class="calorie-info">
+            <span class="calorie-label">Калории</span>
+            <div class="calorie-value"><span class="main">1350</span><span class="sep">/</span><span class="total">1546</span></div>
+            <div class="macro-pills">
+              <span class="macro-pill macro-pill--protein">Б 123 г</span>
+              <span class="macro-pill macro-pill--fat">Ж 672 г</span>
+              <span class="macro-pill macro-pill--carbs">У 112 г</span>
+            </div>
+          </div>
+        </div>
+        <button class="cta-pill" type="button" style="width:100%;">Добавить фото пищи</button>
+      </div>
+
+      <div class="meal-cards">
+        <div class="meal-card"><p class="meal-card-title">Завтрак</p><p class="meal-card-kcal">561 ккал</p></div>
+        <div class="meal-card"><p class="meal-card-title">Обед</p><p class="meal-card-kcal">640 ккал</p></div>
+        <div class="meal-card"><p class="meal-card-title">Ужин</p><p class="meal-card-kcal">521 ккал</p></div>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next" data-goto="12">Далее</button>
+    </div>
+  </section>
+
+  <!-- Screen 11.2 · node 19450:9167 · Ответ 5.3 "Поддержка по питанию" -->
+  <section class="screen screen--branch" data-screen="11-2">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="branch-text">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/6fef42b3-b9ca-433f-a54f-03c201f8c49d.png" alt="" />
+        <h1>Поддержка по питанию</h1>
+        <p>Нутрициолог поможет с вопросами о рационе и рецептах</p>
+      </div>
+
+      <div class="offer-card">
+        <p class="offer-title">Ведущие эксперты</p>
+        <div class="specialist-carousel">
+          <div class="specialist-card">
+            <div class="specialist-name">Татьяна<br />Евдощенко<div class="specialist-role">Нутрициолог</div></div>
+            <div class="specialist-exp">
+              <div class="specialist-exp-icon">⭐</div>
+              <div><div class="specialist-exp-label">Опыт работы</div><div class="specialist-exp-value">8+ лет</div></div>
+            </div>
+          </div>
+          <div class="specialist-card">
+            <div class="specialist-name">Татьяна<br />Евдощенко<div class="specialist-role">Нутрициолог</div></div>
+            <div class="specialist-exp">
+              <div class="specialist-exp-icon">⭐</div>
+              <div><div class="specialist-exp-label">Опыт работы</div><div class="specialist-exp-value">8+ лет</div></div>
+            </div>
+          </div>
+          <div class="specialist-card">
+            <div class="specialist-name">Татьяна<br />Евдощенко<div class="specialist-role">Нутрициолог</div></div>
+            <div class="specialist-exp">
+              <div class="specialist-exp-icon">⭐</div>
+              <div><div class="specialist-exp-label">Опыт работы</div><div class="specialist-exp-value">8+ лет</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next" data-goto="12">Далее</button>
+    </div>
+  </section>
+
+  <!-- Screen 11.3 · node 19450:9315 · Ответ 5.4 "Пока без питания" -->
+  <section class="screen screen--branch" data-screen="11-3">
+    <div class="nav-bar">
+      <button class="nav-back" data-action="back" aria-label="Назад">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content">
+      <div class="progress-block">
+        <div class="progress-line">
+          <div class="progress-step" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <div class="branch-text">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/e4e7acde-f082-44aa-8940-b528639f0cf6.png" alt="" />
+        <h1>Пока без питания</h1>
+        <p>Оставим фокус на тренировках. Рецепты и калории можно попробовать позже</p>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next" data-goto="12">Далее</button>
+    </div>
+  </section>
+
+  <!-- Screen 12 · node 19450:9340 · "Через месяц ты не бросишь!" (results summary) -->
+  <section class="screen screen--results" data-screen="12">
+    <div class="nav-bar">
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="results-body">
+      <div class="branch-text" style="padding:0;">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/2981eb4c-d07a-43cb-8e64-93dbf35f5145.png" alt="" />
+        <h1 style="font-size:24px;">Через месяц ты не бросишь!</h1>
+        <p style="font-size:16px;">Так занимаются те, кто ответил как ты</p>
+      </div>
+
+      <div class="results-card">
+        <p class="results-card-title">Собрали по твоим ответам</p>
+        <div class="chip-row">
+          <span class="chip"><span class="chip-icon">📅</span>план по дням</span>
+          <span class="chip"><span class="chip-icon">😴</span>хорошо засыпать</span>
+          <span class="chip"><span class="chip-icon">👨‍👩‍👧</span>семья</span>
+          <span class="chip"><span class="chip-icon">🥗</span>здоровое питание</span>
+        </div>
+        <p class="results-footnote">25 марафонов · 47 медитаций</p>
+      </div>
+
+      <div class="results-card">
+        <p class="results-card-title">Динамика занятий за 30 дней</p>
+        <svg viewBox="0 0 343 140" width="100%" height="140" fill="none">
+          <line x1="0" y1="20" x2="343" y2="20" stroke="#e7e7ec" stroke-width="1"/>
+          <line x1="0" y1="55" x2="343" y2="55" stroke="#e7e7ec" stroke-width="1"/>
+          <line x1="0" y1="90" x2="343" y2="90" stroke="#e7e7ec" stroke-width="1"/>
+          <line x1="0" y1="125" x2="343" y2="125" stroke="#d3d5da" stroke-width="1"/>
+          <path d="M0,110 C60,105 100,95 140,80 C200,58 260,30 343,15" stroke="#ef16b0" stroke-width="3" fill="none"/>
+          <path d="M0,120 C80,118 160,112 240,105 C280,101 320,98 343,95" stroke="#d3d5da" stroke-width="3" fill="none"/>
+        </svg>
+        <div class="chart-axis"><span>Старт</span><span>30 дней</span></div>
+        <div class="chart-legend">
+          <div class="chart-legend-item"><span class="chart-legend-label">С марафонами</span><div class="chart-legend-bar chart-legend-bar--marathon"></div></div>
+          <div class="chart-legend-item"><span class="chart-legend-label">В обычной программе</span><div class="chart-legend-bar chart-legend-bar--normal"></div></div>
+        </div>
+      </div>
+
+      <div class="results-card">
+        <p class="results-card-title">У тебя уже есть основная подписка.<br />Премиум добавляет:</p>
+        <div class="compare-head">
+          <span class="compare-head-label">В доступ включено</span>
+          <span class="compare-head-col">Основная<br />подписка</span>
+          <span class="compare-head-col premium">Премиум</span>
+        </div>
+        <hr class="compare-divider" />
+        <div class="compare-row"><span class="compare-row-label">2000+ Тренировок</span><span class="compare-row-col"><span class="compare-check compare-check--basic">✓</span></span><span class="compare-row-col"><span class="compare-check compare-check--premium">✓</span></span></div>
+        <div class="compare-row"><span class="compare-row-label">40+ Марафонов</span><span class="compare-row-col"></span><span class="compare-row-col"><span class="compare-check compare-check--premium">✓</span></span></div>
+        <div class="compare-row"><span class="compare-row-label">200+ Медитаций</span><span class="compare-row-col"></span><span class="compare-row-col"><span class="compare-check compare-check--premium">✓</span></span></div>
+        <div class="compare-row"><span class="compare-row-label">Семейные профили</span><span class="compare-row-col"></span><span class="compare-row-col"><span class="compare-check compare-check--premium">✓</span></span></div>
+        <div class="compare-row"><span class="compare-row-label">FitStars.Питание</span><span class="compare-row-col"></span><span class="compare-row-col"><span class="compare-check compare-check--premium">✓</span></span></div>
+        <button class="cta-pill" type="button" style="width:100%; margin-top:4px;">Посмотреть все отличия</button>
+      </div>
+
+      <div class="results-card">
+        <p class="results-card-title">990 ₽ в месяц — это</p>
+        <div class="value-item">
+          <span class="value-item-emoji">☕️</span>
+          <div><p class="value-item-title">2 кофе по дороге</p><p class="value-item-desc">Выпиваешь за минутку</p></div>
+        </div>
+        <div class="value-item">
+          <span class="value-item-emoji">🍿</span>
+          <div><p class="value-item-title">1 поход в кино</p><p class="value-item-desc">На два часа времени</p></div>
+        </div>
+        <div class="value-item">
+          <span class="value-item-emoji">🍣</span>
+          <div><p class="value-item-title">1 доставка еды</p><p class="value-item-desc">Съедается за вечер</p></div>
+        </div>
+        <div class="value-item value-item--highlight">
+          <span class="value-item-emoji">⭐️</span>
+          <div><p class="value-item-title">30 дней тренировок</p><p class="value-item-desc">40+ марафонов, 200+ медитаций, помощь персонального тренера, занятия для близких и многое другое</p></div>
+        </div>
+      </div>
+
+      <div class="results-card">
+        <div class="social-proof-row">
+          <span class="social-proof-emoji">🎉</span>
+          <div>
+            <p class="social-proof-title">Люди, которые ответили как ты</p>
+            <p class="social-proof-desc">Выбрали марафоны и медитации. Сейчас таких 14 тыс. в Премиуме</p>
+          </div>
+        </div>
+        <div class="avatar-stack">
+          <img src="https://www.figma.com/api/mcp/asset/e80c6de8-4926-4311-aa07-906d96803aba.png" alt="" />
+          <img src="https://www.figma.com/api/mcp/asset/7a164409-52f0-4134-a8e4-25390e4abea6.png" alt="" />
+          <img src="https://www.figma.com/api/mcp/asset/e01f6fa3-ab1f-4ff4-ac97-40325cbbe092.png" alt="" />
+          <img src="https://www.figma.com/api/mcp/asset/9015ac46-d619-4b75-9928-c7b21828421d.png" alt="" />
+          <img src="https://www.figma.com/api/mcp/asset/132ceacb-8c2e-42b3-b258-7ba7de84bbb8.png" alt="" />
+          <img src="https://www.figma.com/api/mcp/asset/e0d7b043-a9bb-40e8-97d0-11e03494fb13.png" alt="" />
+          <img src="https://www.figma.com/api/mcp/asset/0f0c4846-cc5d-40ac-b2dc-e5afbd0f57bd.png" alt="" />
+          <span class="avatar-stack-count">+3 420</span>
+        </div>
+      </div>
+
+      <div class="results-card rating-card">
+        <span class="rating-number">4,9</span>
+        <div>
+          <div class="rating-stars">★★★★★</div>
+          <p class="rating-caption">На основании <b>6453 отзывов</b></p>
+        </div>
+      </div>
+
+      <div class="results-card">
+        <p class="results-card-title">Отзывы</p>
+        <div class="review-card">
+          <div class="review-header">
+            <img class="review-avatar" src="https://www.figma.com/api/mcp/asset/ee547f05-78e8-4b04-8960-9398491f4f71.png" alt="" />
+            <div><p class="review-name">Евгений Орлов</p><p class="review-date">Вчера в 18:35</p></div>
+          </div>
+          <p class="review-text">Здравствуйте! Мне очень тяжело делать этот комплекс, какую программу посоветуете в качестве подводящей к этой? Хочется что-то смочь от начала и до конца, это очень мотивирует</p>
+          <div class="review-rating">★★★★★ 5/5</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <img class="review-avatar" src="https://www.figma.com/api/mcp/asset/e94ed85f-a435-47e4-8eb8-75b68d7c4ec3.png" alt="" />
+            <div><p class="review-name">Евгений Орлов</p><p class="review-date">Вчера в 18:35</p></div>
+          </div>
+          <p class="review-text">Здравствуйте! Мне очень тяжело делать этот комплекс, какую программу посоветуете в качестве подводящей к этой? Хочется что-то смочь от начала и до конца, это очень мотивирует</p>
+          <div class="review-rating">★★★★★ 5/5</div>
+        </div>
+      </div>
+
+      <div class="results-card">
+        <div class="timeline-step">
+          <div class="timeline-icon timeline-icon--gift">🎁</div>
+          <div><p class="timeline-title">Сегодня</p><p class="timeline-desc">Всё открывается. Платить не нужно — 0 ₽</p></div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-icon timeline-icon--bell">🔔</div>
+          <div><p class="timeline-title">День 27</p><p class="timeline-desc">Напомним, что бесплатный месяц кончается</p></div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-icon timeline-icon--check">✅</div>
+          <div><p class="timeline-title">День 30</p><p class="timeline-desc">Останешься — 990 ₽/мес. Передумаешь — отмена в 1 клик, ничего не спишем</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-footer">
+      <button class="cta-pill" data-action="next" data-goto="13">Далее</button>
+    </div>
+  </section>
+
+  <!-- Screen 13 · node 19450:10238 · "Можно начинать" -->
+  <section class="screen screen--branch" data-screen="13">
+    <div class="nav-bar">
+      <img class="nav-logo" src="https://www.figma.com/api/mcp/asset/b3ab27da-8c45-4f05-b4c0-dbb6aab496a1.svg" alt="FitStars" />
+    </div>
+
+    <div class="content" style="gap:24px;">
+      <div class="branch-text">
+        <img class="branch-mascot" src="https://www.figma.com/api/mcp/asset/d65573c0-14f5-4f4b-827e-f83a10cc40d5.png" alt="" />
+        <h1 style="font-size:24px;">Можно начинать</h1>
+        <p style="font-size:16px;">Выбран самостоятельный старт. Тренировки уже доступны в текущей подписке</p>
+      </div>
+
+      <div class="premium-banner">
+        <p class="premium-banner-title">Премиум всегда можно подключить позже</p>
+        <div class="premium-slider">
+          <p class="premium-slider-title">Что входит в Премиум-подписку</p>
+          <div class="premium-cards">
+            <div class="premium-card"><div class="premium-card-img">💪</div><p class="premium-card-label">Любые марафоны</p></div>
+            <div class="premium-card"><div class="premium-card-img">🧘</div><p class="premium-card-label">Любые медитации</p></div>
+            <div class="premium-card"><div class="premium-card-img">💬</div><p class="premium-card-label">Чат клуба Dietology.Live</p></div>
+            <div class="premium-card"><div class="premium-card-img">⭐️</div><p class="premium-card-label">Больше звёзд за тренировки</p></div>
+            <div class="premium-card"><div class="premium-card-img">🎧</div><p class="premium-card-label">Приоритетная поддержка</p></div>
+            <div class="premium-card"><div class="premium-card-img">📊</div><p class="premium-card-label">Фит-мониторинг</p></div>
+            <div class="premium-card"><div class="premium-card-img">✨</div><p class="premium-card-label">Визуальное отличие</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-footer" style="display:flex; flex-direction:column; gap:12px;">
+      <button class="cta-pill" data-action="next" data-goto="14" style="width:100%;">Начать с текущей подпиской</button>
+      <button class="link-button" data-action="next" data-goto="14">Что такое Премиум</button>
+    </div>
+  </section>
+
+  <!-- Screen 14 will be appended here once we build it -->
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

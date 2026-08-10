@@ -1,0 +1,34 @@
+/* Design tokens pulled from Figma (FitStars app) via Figma MCP.
+   Keep these in sync with the Figma variables of the same name. */
+:root {
+  /* Colors */
+  --color-accent: #ef16b0;              /* "Roze" */
+  --color-text-primary: #181d31;
+  --color-text-secondary: #414657;
+  --color-border-primary: #d3d5da;
+  --color-border-secondary: #e7e7ec;
+  --color-surface-primary: #ffffff;
+  --color-surface-tertiary-alpha: #ffffff;
+
+  /* Typography */
+  --font-family-title: 'Gilroy', sans-serif;      /* Bold weight */
+  --font-family-body: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-size-xxl: 32px;
+  --font-size-s: 16px;
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --letter-spacing-base: 0px;
+  --letter-spacing-broad: 0.15px;
+
+  /* Radius */
+  --radius-button-square: 12px;
+  --radius-pill: 10px;
+
+  /* Shadows (shadow-elevation-2) */
+  --shadow-elevation-2:
+    0px 4px 15px 2px rgba(49, 24, 31, 0.06),
+    0px 1px 3px 1px rgba(49, 24, 31, 0.06);
+
+  /* Layout */
+  --screen-width: 375px;
+}
