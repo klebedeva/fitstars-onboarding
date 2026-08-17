@@ -24,6 +24,7 @@ html, body {
   display: none;
   flex-direction: column;
   min-height: 100vh;
+  padding-bottom: 96px;
 }
 
 .screen.is-active {
@@ -200,14 +201,23 @@ html, body {
 }
 
 .intro-footer {
-  margin-top: auto;
+  position: fixed;
+  left: 32px;
+  right: 32px;
+  bottom: 32px;
   display: flex;
-  justify-content: center;
-  padding-bottom: 48px;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.intro-footer > * {
+  pointer-events: auto;
 }
 
 .cta-pill {
-  width: calc(100% - 32px);
+  width: 100%;
   height: 48px;
   border: none;
   border-radius: 50px;
@@ -545,8 +555,8 @@ html, body {
 }
 
 .stat-note-icon {
-  font-size: 28px;
-  line-height: 1;
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
 }
 
@@ -849,18 +859,21 @@ html, body {
 
 .macro-pills {
   display: flex;
-  gap: 2px;
+  gap: 4px;
   margin-top: 8px;
+  width: 100%;
 }
 
 .macro-pill {
   flex: 1;
+  min-width: 0;
   text-align: center;
-  padding: 8px;
+  padding: 6px 4px;
   border-radius: 8px;
   font-family: var(--font-family-body);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .macro-pill--protein { background: #d5f1ff; color: #16678f; }
@@ -887,6 +900,27 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.meal-card-check {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #08c408;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.meal-card-check svg {
+  width: 14px;
+  height: 14px;
 }
 
 .meal-card-title {
@@ -906,11 +940,10 @@ html, body {
 .specialist-carousel {
   display: flex;
   gap: 12px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 .specialist-card {
+  position: relative;
   flex-shrink: 0;
   width: 160px;
   height: 200px;
@@ -920,14 +953,41 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
   overflow: hidden;
+}
+
+.specialist-photo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 108px;
+  height: 130px;
+  object-fit: cover;
+  object-position: top;
+  z-index: 1;
+}
+
+.specialist-card--wide .specialist-photo {
+  width: 128px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-8px);
+}
+
+.specialist-info {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .specialist-name {
   font-family: var(--font-family-body);
   font-weight: 700;
   font-size: 16px;
+  line-height: 1.38;
   color: var(--color-text-primary);
 }
 
@@ -935,6 +995,7 @@ html, body {
   font-family: var(--font-family-body);
   font-size: 12px;
   color: var(--color-text-secondary);
+  margin-top: 2px;
 }
 
 .specialist-exp {
@@ -977,7 +1038,7 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 0 16px;
+  padding: 0 16px 96px;
 }
 
 .results-card {
@@ -1016,7 +1077,15 @@ html, body {
 }
 
 .chip-icon {
-  font-size: 18px;
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+}
+
+.chip-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .results-footnote {
@@ -1416,4 +1485,213 @@ html, body {
   color: var(--color-text-primary);
   cursor: pointer;
   padding: 4px;
+}
+
+/* Screenshot carousel (real app screenshots, screens 02 / 02-1 / 02-2) */
+.screenshot-carousel {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+.screenshot-card {
+  flex-shrink: 0;
+  height: 124px;
+  border-radius: 19px;
+  overflow: hidden;
+  position: relative;
+}
+
+.screenshot-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.screenshot-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #fff;
+  border: 1px solid var(--color-border-primary);
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-family: var(--font-family-body);
+  font-weight: 600;
+  font-size: 8px;
+  color: var(--color-text-primary);
+}
+
+/* "Динамика занятий за 30 дней" chart card — real Figma SVG curves */
+.chart-30-card {
+  background: var(--color-surface-primary);
+  border-radius: 16px;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.chart-30-header {
+  padding: 0 16px;
+  font-family: var(--font-family-title);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-text-primary);
+}
+
+.chart-30-graph {
+  position: relative;
+  width: 100%;
+  height: 204px;
+  overflow: hidden;
+}
+
+.chart-30-graph .grid-line {
+  position: absolute;
+  left: 50%;
+  width: 386px;
+  transform: translate(-50%, -50%);
+}
+
+.chart-30-graph .curve {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+.chart-30-axis {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  font-family: var(--font-family-body);
+  font-size: 12px;
+  color: #7a8096;
+}
+
+.chart-30-legend {
+  display: flex;
+  gap: 4px;
+  padding: 0 16px;
+}
+
+/* Program cards, filmstrip crop (screen 02-3) */
+.program-carousel-crop {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.program-card-crop {
+  flex-shrink: 0;
+  width: 150px;
+  height: 208px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.program-card-crop img {
+  position: absolute;
+  display: block;
+  max-width: none;
+}
+
+.cta-pill--primary {
+  background: var(--general-positive, #08c408);
+  color: #fff;
+}
+
+/* Screens 13 / 14 — final premium offer screens */
+.reminder-cards {
+  display: flex;
+  gap: 8px;
+  padding: 0 16px;
+}
+
+.reminder-card {
+  flex: 1;
+  background: var(--color-surface-primary);
+  border-radius: 24px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reminder-card-icon {
+  font-size: 22px;
+}
+
+.reminder-card p {
+  font-family: var(--font-family-title);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-text-primary);
+  letter-spacing: 0.15px;
+}
+
+.reminder-card p .accent,
+.warning-card p .accent {
+  color: var(--color-accent);
+}
+
+.footer-price-note {
+  font-family: var(--font-family-title);
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+
+.warning-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: var(--color-surface-primary);
+  border-radius: 24px;
+  padding: 12px 16px 16px;
+  margin: 0 16px;
+}
+
+.warning-card-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.warning-card p {
+  font-family: var(--font-family-title);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-text-primary);
+  line-height: 1.45;
+  letter-spacing: 0.15px;
+}
+
+.family-avatar.locked {
+  position: relative;
+}
+
+.family-avatar.locked img {
+  filter: grayscale(1);
+  opacity: 0.7;
+}
+
+.family-avatar .lock-badge {
+  position: absolute;
+  bottom: 22px;
+  right: 4px;
+  font-size: 14px;
 }

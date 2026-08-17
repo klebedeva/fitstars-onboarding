@@ -31,6 +31,7 @@
     }
     history.push(index);
     showScreen(index);
+    if (id === '12') renderAnswerChips();
   }
 
   function next() {
@@ -54,6 +55,13 @@
   app.addEventListener('click', (e) => {
     const backBtn = e.target.closest('[data-action="back"]');
     if (backBtn) back();
+  });
+
+  // External links — e.g. the final "Продолжить с Премиумом" buttons that
+  // send the person off to the real pricing page instead of another screen.
+  app.addEventListener('click', (e) => {
+    const linkBtn = e.target.closest('[data-href]');
+    if (linkBtn) window.open(linkBtn.dataset.href, '_blank');
   });
 
   // "Next" buttons — go to an explicit screen if data-goto is set,
@@ -86,5 +94,62 @@
   });
 
   window.onboardingRouter = { next, back, goto, showScreen };
-})();
 
+  // "Собрали по твоим ответам" — chip row on screen 12, built from the
+  // actual choices the person clicked earlier in the flow (screens
+  // 01 / 03 / 08 / 10), not hardcoded. Q3 (screen 05, AI-coach help) has
+  // no matching visual chip in the design, so it's intentionally skipped.
+  const CHIP_MAP = {
+    '01': {
+      plan: { icon: '<img src="https://www.figma.com/api/mcp/asset/e93a5fbc-1b38-4689-8a8b-e9a63801bbd7.png" alt="" />', label: 'план по дням' },
+      challenges: { icon: '🏆', label: 'челленджи и мотивация' },
+      'short-goals': { icon: '⏱', label: 'короткие цели' },
+      self: { icon: '🎯', label: 'свобода выбора' },
+    },
+    '03': {
+      sleep: { icon: '<img src="https://www.figma.com/api/mcp/asset/b4529f46-3222-4579-9fe1-4816685ef951.png" alt="" />', label: 'хорошо засыпать' },
+      relax: { icon: '🧘', label: 'расслабление' },
+      stress: { icon: '🌿', label: 'без стресса' },
+      'workouts-only': { icon: '💪', label: 'только тренировки' },
+    },
+    '08': {
+      family: { icon: '<img src="https://www.figma.com/api/mcp/asset/4fecdb24-31d1-4dac-b151-ade50a181221.png" alt="" />', label: 'семья' },
+      friends: { icon: '👯', label: 'друзья' },
+      solo: { icon: '🧍', label: 'в одиночку' },
+      unsure: { icon: '🤔', label: 'пока не знаю' },
+    },
+    '10': {
+      recipes: { icon: '<img src="https://www.figma.com/api/mcp/asset/1e49630b-ab3f-41d7-9ad3-eafd9bede00d.png" alt="" />', label: 'здоровое питание' },
+      calories: { icon: '🔢', label: 'контроль калорий' },
+      nutritionist: { icon: '👩‍⚕️', label: 'поддержка по питанию' },
+      'not-needed': { icon: '🍽', label: 'без диеты' },
+    },
+  };
+
+  // Fallback chips shown only if the person somehow reaches screen 12
+  // without having answered anything (e.g. jumped straight there while testing).
+  const DEFAULT_CHIPS = [
+    { icon: '<img src="https://www.figma.com/api/mcp/asset/e93a5fbc-1b38-4689-8a8b-e9a63801bbd7.png" alt="" />', label: 'план по дням' },
+    { icon: '<img src="https://www.figma.com/api/mcp/asset/b4529f46-3222-4579-9fe1-4816685ef951.png" alt="" />', label: 'хорошо засыпать' },
+    { icon: '<img src="https://www.figma.com/api/mcp/asset/4fecdb24-31d1-4dac-b151-ade50a181221.png" alt="" />', label: 'семья' },
+    { icon: '<img src="https://www.figma.com/api/mcp/asset/1e49630b-ab3f-41d7-9ad3-eafd9bede00d.png" alt="" />', label: 'здоровое питание' },
+  ];
+
+  function renderAnswerChips() {
+    const container = document.querySelector('[data-chip-row]');
+    if (!container) return;
+
+    const answers = window.onboardingAnswers || {};
+    const chips = [];
+    for (const screenId of Object.keys(CHIP_MAP)) {
+      const value = answers[screenId];
+      const chip = value && CHIP_MAP[screenId][value];
+      if (chip) chips.push(chip);
+    }
+
+    const finalChips = chips.length ? chips : DEFAULT_CHIPS;
+    container.innerHTML = finalChips
+      .map((c) => `<span class="chip"><span class="chip-icon">${c.icon}</span>${c.label}</span>`)
+      .join('');
+  }
+})();
