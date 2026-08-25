@@ -6,7 +6,7 @@
 
 html, body {
   height: 100%;
-  background: var(--color-surface-tertiary-alpha);
+  background: transparent;
   font-family: var(--font-family-body);
   color: var(--color-text-primary);
   -webkit-tap-highlight-color: transparent;
@@ -29,6 +29,17 @@ html, body {
 
 .screen.is-active {
   display: flex;
+}
+
+/* Fixed, non-scrolling backdrop for every screen. Gradient screens
+   override the background in their own ::before below. */
+.screen::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: #ffffff;
 }
 
 /* Nav bar: back button + logo. No fake iOS status bar --
@@ -154,8 +165,16 @@ html, body {
 
 /* Screen 00 · Intro */
 .screen--intro {
-  background: linear-gradient(106deg, #ffdef5 30%, #f7dfff 69%);
   position: relative;
+}
+
+.screen--intro::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(106deg, #ffdef5 30%, #f7dfff 69%);
 }
 
 .intro-content {
@@ -233,6 +252,15 @@ html, body {
 
 /* Screens 02 / 02-1 / 02-2 / 02-3 · Branch (personalized answer) screens */
 .screen--branch {
+  background: transparent;
+}
+
+.screen--branch::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   background: linear-gradient(180deg, rgba(206, 138, 255, 0.25) 0%, rgba(255, 202, 132, 0.25) 100%), #ffffff;
 }
 
@@ -1031,6 +1059,15 @@ html, body {
 
 /* Screen 12 · Results summary */
 .screen--results {
+  background: transparent;
+}
+
+.screen--results::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   background: linear-gradient(180deg, rgba(206, 138, 255, 0.25) 0%, rgba(255, 202, 132, 0.25) 100%), #ffffff;
 }
 
