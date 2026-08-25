@@ -57,9 +57,18 @@ html, body {
   height: calc(56px + env(safe-area-inset-top));
   padding: env(safe-area-inset-top) 16px 0;
   flex-shrink: 0;
-  background: rgba(255, 255, 255, 0.35);
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
+  background: transparent;
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
+  transition: background 0.2s ease, -webkit-backdrop-filter 0.2s ease, backdrop-filter 0.2s ease;
+}
+
+/* Frost the bar only once content has scrolled beneath it. */
+body.is-nav-scrolled .nav-bar {
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  backdrop-filter: saturate(180%) blur(18px);
+  box-shadow: 0 0.5px 0 rgba(0, 0, 0, 0.06);
 }
 
 .nav-back {

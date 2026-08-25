@@ -21,6 +21,7 @@
     screens.forEach((s, i) => s.classList.toggle('is-active', i === index));
     currentIndex = index;
     window.scrollTo(0, 0);
+    document.body.classList.remove('is-nav-scrolled');
   }
 
   function goto(id) {
@@ -92,6 +93,30 @@
       }, 150);
     });
   });
+
+  // Frost the fixed nav bar only when content has scrolled beneath it.
+  // The scroller may be the document OR an inner wrapper (e.g. the native
+  // bottom-sheet host), so listen in the capture phase to catch scroll from
+  // any element and read whichever scroll position actually moved.
+  function scrolledUnderNav(e) {
+    var tops = [
+      window.scrollY || 0,
+      document.scrollingElement ? document.scrollingElement.scrollTop : 0,
+      document.documentElement.scrollTop || 0,
+      document.body.scrollTop || 0,
+    ];
+    if (e && e.target && e.target.nodeType === 1 && typeof e.target.scrollTop === 'number') {
+      tops.push(e.target.scrollTop);
+    }
+    return Math.max.apply(null, tops) > 4;
+  }
+  function updateNavScrolled(e) {
+    document.body.classList.toggle('is-nav-scrolled', scrolledUnderNav(e));
+  }
+  // capture:true catches scroll events from inner scrollers (scroll doesn't bubble)
+  document.addEventListener('scroll', updateNavScrolled, true);
+  window.addEventListener('scroll', updateNavScrolled, { passive: true });
+  updateNavScrolled();
 
   window.onboardingRouter = { next, back, goto, showScreen };
 
