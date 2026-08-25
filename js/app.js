@@ -17,11 +17,38 @@
 
   const history = [currentIndex];
 
+  // Onboarding is a 5-question flow. Each question screen and the branch
+  // (answer) screens that follow it belong to the same step, so the progress
+  // bar reflects "which question are we on", 1..5.
+  const STEP_TOTAL = 5;
+  const STEP_BY_SCREEN = {
+    '01': 1, '02': 1, '02-1': 1, '02-2': 1, '02-3': 1,
+    '03': 2, '04': 2, '04-1': 2, '04-2': 2, '04-3': 2,
+    '05': 3, '06': 3, '06-1': 3, '06-2': 3,
+    '08': 4, '09': 4, '09-1': 4, '09-2': 4, '09-3': 4,
+    '10': 5, '11': 5, '11-1': 5, '11-2': 5, '11-3': 5,
+  };
+  let lastStepPct = 0;
+
+  function updateProgress(screen) {
+    const bar = screen.querySelector('.progress-step');
+    const step = STEP_BY_SCREEN[screen.dataset.screen];
+    if (!bar || !step) return; // intro / results / etc. have no progress bar
+    const target = (step / STEP_TOTAL) * 100;
+    // Start from the previous fill, then transition to the new one so the bar
+    // animates forward as you advance (and backward when you go Back).
+    bar.style.width = lastStepPct + '%';
+    void bar.offsetWidth; // force reflow so the transition has a start value
+    bar.style.width = target + '%';
+    lastStepPct = target;
+  }
+
   function showScreen(index) {
     screens.forEach((s, i) => s.classList.toggle('is-active', i === index));
     currentIndex = index;
     window.scrollTo(0, 0);
     document.body.classList.remove('is-nav-scrolled');
+    updateProgress(screens[index]);
   }
 
   function goto(id) {
