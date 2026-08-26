@@ -97,11 +97,31 @@
     }
   }
 
+  // Clear a screen's chosen answer (highlight + stored value) so the user
+  // starts fresh if they return to it.
+  function resetAnswers(screen) {
+    if (!screen) return;
+    screen.querySelectorAll('.button-chooser.is-selected')
+      .forEach((b) => b.classList.remove('is-selected'));
+    if (window.onboardingAnswers) delete window.onboardingAnswers[screen.dataset.screen];
+  }
+
+  // Question screens carry an answer group; branch screens are interstitials.
+  function isQuestionScreen(screen) {
+    return !!(screen && screen.querySelector('[data-answers]'));
+  }
+
   function back() {
-    if (history.length > 1) {
+    if (history.length <= 1) return;
+    history.pop();
+    // Skip interstitial (branch) screens so Back returns to the previous
+    // question — where the user re-answers — instead of the answer screen.
+    while (history.length > 1 && !isQuestionScreen(screens[history[history.length - 1]])) {
       history.pop();
-      showScreen(history[history.length - 1]);
     }
+    const index = history[history.length - 1];
+    showScreen(index);
+    resetAnswers(screens[index]);
   }
 
   // Back buttons
