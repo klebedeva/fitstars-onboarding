@@ -14,22 +14,21 @@
   // Bridge to the native iOS/Android host. "Начать с текущей подпиской"
   // means the user skipped the Premium offer, so notify the host (which
   // dismisses the webview and continues with the current subscription).
-  //   iOS (WKWebView): window.webkit.messageHandlers.fitstars_onboarding_skipped.postMessage(payload)
-  //   Android (addJavascriptInterface): window.fitstars_onboarding_skipped.postMessage(jsonString)
-  function notifyOnboardingSkipped(detail) {
-    const payload = Object.assign({ event: 'onboarding_skipped' }, detail || {});
+  //   iOS (WKWebView): window.webkit.messageHandlers.fitstarsOnboardingSkipped.postMessage(payload)
+  //   Android (addJavascriptInterface): window.FitstarsBridge.fitstarsOnboardingSkipped(jsonString)
+  function notifyOnboardingSkipped() {
     try {
       const ios = window.webkit
         && window.webkit.messageHandlers
-        && window.webkit.messageHandlers.fitstars_onboarding_skipped;
-      if (ios) ios.postMessage(payload);
+        && window.webkit.messageHandlers.fitstarsOnboardingSkipped;
+      if (ios) ios.postMessage({});
     } catch (err) {
       console.log('[onboarding] iOS skip bridge failed', err);
     }
     try {
-      const android = window.fitstars_onboarding_skipped;
-      if (android && typeof android.postMessage === 'function') {
-        android.postMessage(JSON.stringify(payload));
+      const android = window.FitstarsBridge;
+      if (android && typeof android.fitstarsOnboardingSkipped === 'function') {
+        android.postMessage(JSON.stringify({}));
       }
     } catch (err) {
       console.log('[onboarding] Android skip bridge failed', err);
@@ -134,8 +133,7 @@
   app.addEventListener('click', (e) => {
     const skipBtn = e.target.closest('[data-action="skip"]');
     if (!skipBtn) return;
-    const screen = skipBtn.closest('.screen');
-    notifyOnboardingSkipped({ screen: screen ? screen.dataset.screen : null });
+    notifyOnboardingSkipped();
   });
 
   // External links — e.g. the final "Продолжить с Премиумом" buttons that
