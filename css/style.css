@@ -6,7 +6,7 @@
 
 html, body {
   height: 100%;
-  background: var(--color-surface-tertiary-alpha);
+  background: transparent;
   font-family: var(--font-family-body);
   color: var(--color-text-primary);
   -webkit-tap-highlight-color: transparent;
@@ -24,11 +24,60 @@ html, body {
   display: none;
   flex-direction: column;
   min-height: 100vh;
-  padding-bottom: 96px;
+  padding-top: calc(56px + env(safe-area-inset-top));
+  padding-bottom: calc(120px + env(safe-area-inset-bottom));
 }
 
 .screen.is-active {
   display: flex;
+}
+
+/* Fixed, non-scrolling backdrop for every screen. Gradient screens
+   override the background in their own ::before below. */
+.screen::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: #ffffff;
+}
+
+/* Bottom cover: hides scrolling content behind/around the fixed CTA button.
+   Reuses each screen's fixed background (same gradient as ::before), so
+   content fades into the background before it reaches the button. Only the
+   bottom strip is opaque; it fades to transparent above the button. */
+.screen::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  background: #ffffff;
+  -webkit-mask-image: linear-gradient(to top, #000 calc(84px + env(safe-area-inset-bottom)), transparent calc(108px + env(safe-area-inset-bottom)));
+  mask-image: linear-gradient(to top, #000 calc(84px + env(safe-area-inset-bottom)), transparent calc(108px + env(safe-area-inset-bottom)));
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.screen--intro::after {
+  background: linear-gradient(106deg, #ffdef5 30%, #f7dfff 69%);
+}
+
+.screen--branch::after,
+.screen--results::after {
+  background: linear-gradient(180deg, rgba(206, 138, 255, 0.25) 0%, rgba(255, 202, 132, 0.25) 100%), #ffffff;
+}
+
+/* Final offer screens (13/14) have a taller footer: CTA + price note +
+   "start with current plan" link. Reserve more room and cover higher. */
+.screen--offer {
+  padding-bottom: calc(176px + env(safe-area-inset-bottom));
+}
+
+.screen--offer::after {
+  -webkit-mask-image: linear-gradient(to top, #000 calc(150px + env(safe-area-inset-bottom)), transparent calc(176px + env(safe-area-inset-bottom)));
+  mask-image: linear-gradient(to top, #000 calc(150px + env(safe-area-inset-bottom)), transparent calc(176px + env(safe-area-inset-bottom)));
 }
 
 /* Nav bar: back button + logo. No fake iOS status bar --
@@ -37,15 +86,32 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  height: 56px;
-  padding: 0 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  height: calc(56px + env(safe-area-inset-top));
+  padding: env(safe-area-inset-top) 16px 0;
   flex-shrink: 0;
+  background: transparent;
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
+  transition: background 0.2s ease, -webkit-backdrop-filter 0.2s ease, backdrop-filter 0.2s ease;
+}
+
+/* Frost the bar only once content has scrolled beneath it. */
+body.is-nav-scrolled .nav-bar {
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  backdrop-filter: saturate(180%) blur(18px);
+  box-shadow: 0 0.5px 0 rgba(0, 0, 0, 0.06);
 }
 
 .nav-back {
   position: absolute;
   left: 16px;
+  top: calc(env(safe-area-inset-top) + 16px);
   width: 24px;
   height: 24px;
   display: flex;
@@ -154,8 +220,16 @@ html, body {
 
 /* Screen 00 · Intro */
 .screen--intro {
-  background: linear-gradient(106deg, #ffdef5 30%, #f7dfff 69%);
   position: relative;
+}
+
+.screen--intro::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(106deg, #ffdef5 30%, #f7dfff 69%);
 }
 
 .intro-content {
@@ -204,7 +278,7 @@ html, body {
   position: fixed;
   left: 32px;
   right: 32px;
-  bottom: 32px;
+  bottom: calc(32px + env(safe-area-inset-bottom));
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -233,6 +307,15 @@ html, body {
 
 /* Screens 02 / 02-1 / 02-2 / 02-3 · Branch (personalized answer) screens */
 .screen--branch {
+  background: transparent;
+}
+
+.screen--branch::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   background: linear-gradient(180deg, rgba(206, 138, 255, 0.25) 0%, rgba(255, 202, 132, 0.25) 100%), #ffffff;
 }
 
@@ -1031,6 +1114,15 @@ html, body {
 
 /* Screen 12 · Results summary */
 .screen--results {
+  background: transparent;
+}
+
+.screen--results::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   background: linear-gradient(180deg, rgba(206, 138, 255, 0.25) 0%, rgba(255, 202, 132, 0.25) 100%), #ffffff;
 }
 
