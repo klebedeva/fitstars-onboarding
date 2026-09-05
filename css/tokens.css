@@ -10,9 +10,16 @@
   --color-surface-primary: #ffffff;
   --color-surface-tertiary-alpha: #ffffff;
 
-  /* Typography */
-  --font-family-title: 'Gilroy', sans-serif;      /* Bold weight */
-  --font-family-body: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Typography.
+     Figma uses "Gilroy" for every text style (title / body / header).
+     Gilroy is a licensed font with no free web source — drop real
+     Gilroy-*.woff2 files into css/fonts/ and add @font-face to use them.
+     Until then "Montserrat" (loaded from Google Fonts in index.html) is
+     the closest free stand-in so the shape is consistent on every device. */
+  --font-family-title: 'Gilroy', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-body: 'Gilroy', 'Montserrat', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  --font-family-header: var(--font-family-title);
+  --font-family-subheader: var(--font-family-title);
   --font-size-xxl: 32px;
   --font-size-s: 16px;
   --font-weight-bold: 700;
