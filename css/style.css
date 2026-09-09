@@ -6,6 +6,8 @@
 
 html, body {
   height: 100%;
+  width: 100%;
+  overflow-x: hidden;
   background: var(--color-surface-tertiary-alpha);
   font-family: var(--font-family-body);
   color: var(--color-text-primary);
@@ -14,8 +16,8 @@ html, body {
 
 #app {
   width: 100%;
+  min-width: 360px;
   min-height: 100vh;
-  min-height: 100dvh;
   position: relative;
   overflow-x: hidden;
 }
@@ -23,42 +25,12 @@ html, body {
 .screen {
   display: none;
   flex-direction: column;
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  overflow-x: hidden;
   min-height: 100vh;
-  min-height: 100dvh;
-  /* room for the fixed .intro-footer + iOS home indicator */
-  padding-bottom: calc(120px + env(safe-area-inset-bottom));
-}
-
-/* flex children must be allowed to shrink, or a wide descendant
-   (unwrapped heading, full-res image) stretches the whole column
-   past the viewport */
-.screen > *,
-.content,
-.content > * {
-  min-width: 0;
-  max-width: 100%;
+  padding-bottom: 96px;
 }
 
 .screen.is-active {
   display: flex;
-}
-
-/* Question screens auto-advance on tap — no footer button, so no reserved space */
-.screen[data-screen="01"],
-.screen[data-screen="03"],
-.screen[data-screen="08"],
-.screen[data-screen="10"] {
-  padding-bottom: 24px;
-}
-
-/* Screens 13 / 14 — footer stacks button + price note + link */
-.screen[data-screen="13"],
-.screen[data-screen="14"] {
-  padding-bottom: calc(200px + env(safe-area-inset-bottom));
 }
 
 /* Nav bar: back button + logo. No fake iOS status bar --
@@ -70,7 +42,6 @@ html, body {
   position: relative;
   height: 56px;
   padding: 0 16px;
-  margin-top: env(safe-area-inset-top);
   flex-shrink: 0;
 }
 
@@ -233,26 +204,13 @@ html, body {
 
 .intro-footer {
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  left: 32px;
+  right: 32px;
+  bottom: 32px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 12px 32px calc(24px + env(safe-area-inset-bottom));
   z-index: 20;
-  pointer-events: none;
-}
-
-/* keep the pill readable when long content scrolls under it
-   (skipped on the intro screen, which has its own coloured background) */
-.screen--branch .intro-footer::before,
-.screen--results .intro-footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.95) 55%, rgba(255, 255, 255, 0));
-  z-index: -1;
   pointer-events: none;
 }
 
@@ -280,21 +238,10 @@ html, body {
   background: linear-gradient(180deg, rgba(206, 138, 255, 0.25) 0%, rgba(255, 202, 132, 0.25) 100%), #ffffff;
 }
 
-/* Figma spacing: navbar→progress 24, progress→mascot 24 (12 pad-ish + 12 gap),
-   mascot→title 8, title→subtitle 8, text→card 12, card→card 12 */
-.screen--branch .content {
-  gap: 12px;
-  padding-top: 24px;
-}
-
-.screen--branch .progress-block {
-  margin-bottom: 12px;
-}
-
 .branch-text {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   gap: 8px;
   padding: 0 16px;
   text-align: center;
@@ -303,7 +250,6 @@ html, body {
 .branch-mascot {
   width: 120px;
   height: 120px;
-  margin: 0 auto 4px;
   object-fit: contain;
 }
 
@@ -315,7 +261,7 @@ html, body {
   color: var(--color-text-primary);
 }
 
-.branch-text h1 .accent {
+.accent {
   color: var(--color-accent);
 }
 
@@ -333,7 +279,7 @@ html, body {
   padding: 12px 16px 16px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 .offer-title {
@@ -622,10 +568,6 @@ html, body {
   font-size: 14px;
   line-height: 1.45;
   color: var(--color-text-primary);
-}
-
-.stat-note-text .accent {
-  color: var(--color-accent);
 }
 
 .stat-note-source {
@@ -1094,7 +1036,7 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 0 16px;
+  padding: 0 16px 96px;
 }
 
 .results-card {
@@ -1517,10 +1459,7 @@ html, body {
   border-radius: 16px;
   background: #ece6fe;
   object-fit: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 36px;
+  display: block;
 }
 
 .premium-card-label {
@@ -1699,11 +1638,6 @@ html, body {
   letter-spacing: 0.15px;
 }
 
-.reminder-card p .accent,
-.warning-card p .accent {
-  color: var(--color-accent);
-}
-
 .footer-price-note {
   font-family: var(--font-family-title);
   font-weight: 700;
@@ -1762,7 +1696,8 @@ html, body {
 
 .marathon-single img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -1786,7 +1721,7 @@ html, body {
   display: flex;
   gap: 12px;
   align-items: flex-start;
-  margin: 0 16px;
+  width: 100%;
 }
 
 .stat-card-icon {
@@ -1802,10 +1737,6 @@ html, body {
   line-height: 1.45;
   letter-spacing: 0.15px;
   color: var(--color-text-primary);
-}
-
-.stat-card-text .accent {
-  color: var(--color-accent);
 }
 
 /* Meditation cards v2 (screens 04 / 04-1 / 04-2 / 04-3, updated design) */

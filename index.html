@@ -4,9 +4,6 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>FitStars — Onboarding</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" />
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -22,9 +19,8 @@
     <div class="intro-content">
       <img class="intro-mascot" src="assets/mascot-holiday.png" alt="" />
       <div class="intro-card">
-        <h1>Подписка оформлена</h1>
-        <p>Теперь можно добавить возможности, которые помогут заниматься регулярнее</p>
-        <p>5 коротких вопросов</p>
+        <h1>Выбери возможности, которые помогут заниматься регулярнее</h1>
+        <p>Ответь на 4 коротких вопроса</p>
       </div>
     </div>
 
@@ -90,8 +86,9 @@
 
       <div class="offer-card">
         <p class="offer-title">Подходит тебе</p>
-        <div class="marathon-single">
+        <div class="marathon-single" style="height:103px;">
           <img src="assets/marathon-1.png" alt="" />
+          <span class="marathon-single-badge">Пройти</span>
         </div>
       </div>
 
@@ -132,8 +129,9 @@
 
       <div class="offer-card">
         <p class="offer-title">Подходит тебе</p>
-        <div class="marathon-single">
+        <div class="marathon-single" style="height:123px;">
           <img src="assets/marathon-22.png" alt="" />
+          <span class="marathon-single-badge">Пройти</span>
         </div>
       </div>
 
@@ -174,8 +172,9 @@
 
       <div class="offer-card">
         <p class="offer-title">Подходит тебе</p>
-        <div class="marathon-single">
+        <div class="marathon-single" style="height:103px;">
           <img src="assets/marathon-33.png" alt="" />
+          <span class="marathon-single-badge">Пройти</span>
         </div>
       </div>
 
@@ -216,8 +215,9 @@
 
       <div class="offer-card">
         <p class="offer-title">Подходит тебе</p>
-        <div class="marathon-single">
+        <div class="marathon-single" style="height:103px;">
           <img src="assets/marathon-44.png" alt="" />
+          <span class="marathon-single-badge">Пройти</span>
         </div>
       </div>
 
@@ -251,14 +251,14 @@
       </div>
 
       <div class="question">
-        <h1>Что поможет восстановиться<br />после рабочего дня?</h1>
+        <h1>Какого состояния тебе<br />сейчас не хватает?</h1>
       </div>
 
       <div class="answers" data-answers>
-        <button class="button-chooser" data-value="sleep" data-goto="04">Хочу легко засыпать</button>
-        <button class="button-chooser" data-value="relax" data-goto="04-1">Расслабление после работы</button>
-        <button class="button-chooser" data-value="stress" data-goto="04-2">Избавиться от стресса</button>
-        <button class="button-chooser" data-value="workouts-only" data-goto="04-3">Пока только тренировки</button>
+        <button class="button-chooser" data-value="sleep" data-goto="04">Крепкого сна</button>
+        <button class="button-chooser" data-value="relax" data-goto="04-1">Спокойствия</button>
+        <button class="button-chooser" data-value="stress" data-goto="04-2">Энергии</button>
+        <button class="button-chooser" data-value="workouts-only" data-goto="04-3">Уверенности</button>
       </div>
     </div>
   </section>
@@ -283,27 +283,27 @@
 
       <div class="branch-text">
         <img class="branch-mascot" src="assets/mascot-yoga.png" alt="" />
-        <h1>Подойдут <span class="accent">медитации</span></h1>
+        <h1>Для тебя подойдут <span class="accent">Медитации</span></h1>
         <p>Помогают расслабиться вечером и настроиться на отдых</p>
       </div>
 
       <div class="stats-card">
-        <p class="stats-card-title">За 8 недель практики в приложении у пользователей значимо снизились:</p>
+        <p class="stats-card-title">За 8 недель медитаций снижается:</p>
         <div class="stats-list">
           <div class="stats-row">
-            <svg class="icon-down" viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 15H7M15 15V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>усталость днём</span>
+            <img class="icon-down" src="assets/icon-down.png" alt="" />
+            <span>Напряжение перед сном <span class="accent">↓ 12–14%</span></span>
           </div>
           <div class="stats-row">
-            <svg class="icon-down" viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 15H7M15 15V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>сонливость днём</span>
+            <img class="icon-down" src="assets/icon-down.png" alt="" />
+            <span>Усталость <span class="accent">↓ 5%</span></span>
           </div>
           <div class="stats-row">
-            <svg class="icon-down" viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 15H7M15 15V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>напряжение перед сном</span>
+            <img class="icon-down" src="assets/icon-down.png" alt="" />
+            <span>Сонливость <span class="accent">↓ 7%</span></span>
           </div>
         </div>
-        <p class="stats-footnote">По исследованию PLOS ONE, 2021 · 263 участника</p>
+        <p class="stats-footnote">Изменение среднего балла по шкалам<br />PLOS ONE, 2021 · 263 участника</p>
       </div>
 
       <div class="offer-card">
@@ -353,36 +353,17 @@
 
       <div class="branch-text">
         <img class="branch-mascot" src="assets/mascot-yoga.png" alt="" />
-        <h1>Подойдут <span class="accent">медитации</span></h1>
-        <p>По исследованиям прослушивание медитаций влияет на снижение кортизола</p>
-      </div>
-
-      <div class="stats-card">
-        <p class="stats-card-title">За 8 недель практики в приложении у пользователей значимо снизились:</p>
-        <div class="stats-list">
-          <div class="stats-row">
-            <svg class="icon-down" viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 15H7M15 15V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>усталость днём</span>
-          </div>
-          <div class="stats-row">
-            <svg class="icon-down" viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 15H7M15 15V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>сонливость днём</span>
-          </div>
-          <div class="stats-row">
-            <svg class="icon-down" viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 15H7M15 15V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>напряжение перед сном</span>
-          </div>
-        </div>
-        <p class="stats-footnote">По исследованию PLOS ONE, 2021 · 263 участника</p>
+        <h1>Для тебя подойдут <span class="accent">Медитации</span></h1>
+        <p>Помогают снизить стресс и расслабиться</p>
       </div>
 
       <div class="offer-card">
         <p class="offer-title">Подходящие тебе</p>
         <div class="meditation-carousel-v2">
           <div class="meditation-card-v2">
-            <p class="meditation-card-v2-title">Энергия</p>
+            <p class="meditation-card-v2-title">Тело</p>
             <svg class="meditation-card-v2-headphone" viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="#181d31" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <img class="meditation-card-v2-icon-decor" src="assets/image-09-01.png" alt="" />
+            <img class="meditation-card-v2-icon-decor" src="assets/image-09-02.png" alt="" />
           </div>
           <div class="meditation-card-v2">
             <p class="meditation-card-v2-title">Сон</p>
@@ -390,11 +371,16 @@
             <img class="meditation-card-v2-icon-decor" src="assets/image-09.png" alt="" />
           </div>
           <div class="meditation-card-v2">
-            <p class="meditation-card-v2-title">Тело</p>
+            <p class="meditation-card-v2-title">Энергия</p>
             <svg class="meditation-card-v2-headphone" viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="#181d31" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <img class="meditation-card-v2-icon-decor" src="assets/image-09-02.png" alt="" />
+            <img class="meditation-card-v2-icon-decor" src="assets/image-09-01.png" alt="" />
           </div>
         </div>
+      </div>
+
+      <div class="stat-card">
+        <img class="stat-card-icon" src="assets/icon-up.png" alt="" />
+        <p class="stat-card-text">Прослушивание медитаций помогает снизить уровень кортизола <span class="accent">на 20%</span></p>
       </div>
     </div>
 
@@ -423,32 +409,26 @@
 
       <div class="branch-text">
         <img class="branch-mascot" src="assets/mascot-yoga.png" alt="" />
-        <h1>Подойдут <span class="accent">медитации</span></h1>
-        <p>По исследованиям прослушивание медитаций влияет на снижение кортизола</p>
+        <h1>Для тебя подойдут <span class="accent">Медитации</span></h1>
+        <p>Помогают снизить усталость и вернуть концентрацию</p>
       </div>
 
-      <div class="stats-card">
-        <p class="stats-card-title">За 8 недель практики в приложении у пользователей значимо снизились:</p>
-        <div class="stats-list">
-          <div class="stats-row">
-            <svg class="icon-down" viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 15H7M15 15V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>усталость днём</span>
-          </div>
-          <div class="stats-row">
-            <svg class="icon-down" viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 15H7M15 15V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>сонливость днём</span>
-          </div>
-          <div class="stats-row">
-            <svg class="icon-down" viewBox="0 0 20 20" fill="none"><path d="M5 5L15 15M15 15H7M15 15V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>напряжение перед сном</span>
-          </div>
+      <div class="stat-note-card">
+        <img class="stat-note-icon" src="assets/icon-up.png" alt="" />
+        <div>
+          <p class="stat-note-text">За 6 недель медитации влияние усталости на повседневную жизнь снизилось <span class="accent">на 32%</span></p>
+          <p class="stat-note-source">JAMA Internal Medicine, 2015</p>
         </div>
-        <p class="stats-footnote">По исследованию PLOS ONE, 2021 · 263 участника</p>
       </div>
 
       <div class="offer-card">
         <p class="offer-title">Подходящие тебе</p>
         <div class="meditation-carousel-v2">
+          <div class="meditation-card-v2">
+            <p class="meditation-card-v2-title">Энергия</p>
+            <svg class="meditation-card-v2-headphone" viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="#181d31" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <img class="meditation-card-v2-icon-decor" src="assets/image-09-01.png" alt="" />
+          </div>
           <div class="meditation-card-v2">
             <p class="meditation-card-v2-title">Тело</p>
             <svg class="meditation-card-v2-headphone" viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="#181d31" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -458,11 +438,6 @@
             <p class="meditation-card-v2-title">Сон</p>
             <svg class="meditation-card-v2-headphone" viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="#181d31" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <img class="meditation-card-v2-icon-decor" src="assets/image-09.png" alt="" />
-          </div>
-          <div class="meditation-card-v2">
-            <p class="meditation-card-v2-title">Энергия</p>
-            <svg class="meditation-card-v2-headphone" viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="#181d31" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <img class="meditation-card-v2-icon-decor" src="assets/image-09-01.png" alt="" />
           </div>
         </div>
       </div>
@@ -493,13 +468,26 @@
 
       <div class="branch-text">
         <img class="branch-mascot" src="assets/mascot-workout2.png" alt="" />
-        <h1>Оставим фокус на <span class="accent">движении</span></h1>
-        <p>Можно начать с тренировок в текущей подписке, а медитации попробовать позже</p>
+        <h1>Для тебя подойдут <span class="accent">Медитации</span></h1>
+        <p>Помогут поддерживать себя и увереннее принимать решения</p>
+      </div>
+
+      <div class="stat-note-card">
+        <img class="stat-note-icon" src="assets/icon-up.png" alt="" />
+        <div>
+          <p class="stat-note-text">За 8 недель медитаций уровень самоподдержки вырос <span class="accent">на 24%</span></p>
+          <p class="stat-note-source">JMIR, 2019 · РКИ · 88 участников</p>
+        </div>
       </div>
 
       <div class="offer-card">
         <p class="offer-title">Избранные медитации</p>
         <div class="meditation-carousel-v2">
+          <div class="meditation-card-v2">
+            <p class="meditation-card-v2-title">Тело</p>
+            <svg class="meditation-card-v2-headphone" viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="#181d31" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <img class="meditation-card-v2-icon-decor" src="assets/image-09-02.png" alt="" />
+          </div>
           <div class="meditation-card-v2">
             <p class="meditation-card-v2-title">Сон</p>
             <svg class="meditation-card-v2-headphone" viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="#181d31" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -509,11 +497,6 @@
             <p class="meditation-card-v2-title">Энергия</p>
             <svg class="meditation-card-v2-headphone" viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="#181d31" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <img class="meditation-card-v2-icon-decor" src="assets/image-09-01.png" alt="" />
-          </div>
-          <div class="meditation-card-v2">
-            <p class="meditation-card-v2-title">Тело</p>
-            <svg class="meditation-card-v2-headphone" viewBox="0 0 24 24" fill="none"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 002 2h1v-5H5a1 1 0 00-1 1v2zm16 0a2 2 0 01-2 2h-1v-5h1a1 1 0 011 1v2z" stroke="#181d31" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <img class="meditation-card-v2-icon-decor" src="assets/image-09-02.png" alt="" />
           </div>
         </div>
       </div>
@@ -785,7 +768,7 @@
         <p>Веди дневник питания и следи за КБЖУ без жёстких ограничений</p>
       </div>
 
-      <img src="assets/food-1.png" alt="Разбор рациона" style="width:100%; border-radius:20px; display:block;" />
+      <img src="assets/food-1.png" alt="Разбор рациона" style="width:calc(100% - 32px); margin:0 auto; border-radius:20px; display:block;" />
     </div>
 
     <div class="intro-footer">
@@ -817,7 +800,7 @@
         <p>Выбирай полезные рецепты на каждый день и консультируйся с виртуальным нутрициологом.</p>
       </div>
 
-      <img src="assets/food-2.png" alt="" style="width:100%; display:block;" />
+      <img src="assets/food-2.png" alt="" style="width:calc(100% - 32px); margin:0 auto; display:block;" />
     </div>
 
     <div class="intro-footer">
@@ -849,7 +832,7 @@
         <p>Готовь простые и вкусные блюда из доступных продуктов без лишних хлопот</p>
       </div>
 
-      <img src="assets/food3.png" alt="Завтрак" style="width:100%; display:block;" />
+      <img src="assets/food3.png" alt="Завтрак" style="width:calc(100% - 32px); margin:0 auto; display:block;" />
     </div>
 
     <div class="intro-footer">
@@ -881,7 +864,7 @@
         <p>Записывай приёмы пищи в дневник и следи за калориями, белками, жирами и углеводами.</p>
       </div>
 
-      <img src="assets/food-4.png" alt="Твой день сегодня" style="width:100%; border-radius:20px; display:block; background:white; padding:16px 12px 16px 16px; box-sizing:border-box;" />
+      <img src="assets/food-4.png" alt="Твой день сегодня" style="width:calc(100% - 32px); margin:0 auto; border-radius:20px; display:block; background:white; padding:16px 12px 16px 16px; box-sizing:border-box;" />
     </div>
 
     <div class="intro-footer">
@@ -911,7 +894,7 @@
       </div>
 
       <div class="chart-30-card" style="padding:16px;">
-        <img src="assets/30%20days-00.png" alt="Динамика занятий за 30 дней" style="width:100%; display:block;" />
+        <img src="assets/30 days.png" alt="Динамика занятий за 30 дней" style="width:100%; display:block;" />
       </div>
 
       <div class="results-card">
@@ -1025,6 +1008,17 @@
         <h1 style="font-size:28px;">14 дней Премиума бесплатно</h1>
       </div>
 
+      <div class="premium-slider">
+        <p class="premium-slider-title">Также доступно в Премиуме</p>
+        <div class="premium-cards">
+          <div class="premium-card"><img class="premium-card-img" src="assets/premium-support.png" alt="" /><p class="premium-card-label">Приоритетная поддержка</p></div>
+          <div class="premium-card"><img class="premium-card-img" src="assets/premium-chat.png" alt="" /><p class="premium-card-label">Чат клуба Dietology.Live</p></div>
+          <div class="premium-card"><img class="premium-card-img" src="assets/premium-stars.png" alt="" /><p class="premium-card-label">Больше звёзд за тренировки</p></div>
+          <div class="premium-card"><img class="premium-card-img" src="assets/premium-fit-monitor.png" alt="" /><p class="premium-card-label">Фит-мониторинг</p></div>
+          <div class="premium-card"><img class="premium-card-img" src="assets/premium-visual.png" alt="" /><p class="premium-card-label">Визуальное отличие</p></div>
+        </div>
+      </div>
+
       <div class="reminder-cards">
         <div class="reminder-card">
           <div class="reminder-card-icon">🔔</div>
@@ -1038,7 +1032,7 @@
     </div>
 
     <div class="intro-footer">
-      <button class="cta-pill cta-pill--primary" data-href="https://fitstars.ru/special-offer/14days-free?promo=premqwiz">Продолжить с Премиумом</button>
+      <button class="cta-pill cta-pill--primary" data-href="https://fitstars.ru/special-offer/premiums#tariffs">Продолжить с Премиумом</button>
       <p class="footer-price-note">Далее 990 ₽ в месяц</p>
       <button class="link-button" data-action="next" data-goto="14">Начать с текущей подпиской</button>
     </div>
@@ -1072,7 +1066,7 @@
     </div>
 
     <div class="intro-footer">
-      <button class="cta-pill cta-pill--primary" data-href="https://fitstars.ru/special-offer/14days-free?promo=premqwiz">Продолжить с Премиумом</button>
+      <button class="cta-pill cta-pill--primary" data-href="https://fitstars.ru/special-offer/premiums#tariffs">Продолжить с Премиумом</button>
       <p class="footer-price-note">Далее 990 ₽ в месяц</p>
       <button class="link-button">Начать с текущей подпиской</button>
     </div>
