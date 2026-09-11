@@ -117,6 +117,7 @@
       kids: { icon: '<img src="assets/Family_Img.png" alt="" />', label: 'с детьми' },
       parents: { icon: '<img src="assets/Family_Img.png" alt="" />', label: 'с родителями' },
       friends: { icon: '<img src="assets/Family_Img.png" alt="" />', label: 'с друзьями' },
+      solo: { icon: '<img src="assets/Family_Img.png" alt="" />', label: 'одному' },
     },
     '10': {
       recipes: { icon: '<img src="assets/Salad_img.png" alt="" />', label: 'здоровое питание' },
