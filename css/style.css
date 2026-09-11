@@ -1488,6 +1488,8 @@ html, body {
 .link-button {
   background: none;
   border: none;
+  width: 100%;
+  text-align: center;
   font-family: var(--font-family-title);
   font-weight: 500;
   font-size: 16px;
@@ -2066,3 +2068,15 @@ html, body {
 .day-summary-macro--protein { background: #d5f1ff; color: #16678f; }
 .day-summary-macro--fat { background: #ffefd7; color: #bc7e20; }
 .day-summary-macro--carbs { background: #defae4; color: #3ba165; }
+
+/* In-flow footer (screen 13 only) — scrolls with content instead of staying fixed */
+.content-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0 16px;
+}
+
+[data-screen="13"] {
+  padding-bottom: 24px;
+}
