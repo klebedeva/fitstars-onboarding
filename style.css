@@ -2071,7 +2071,6 @@ html, body {
 .content-footer {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0;
   padding: 0 16px;
-  margin-top: 8px;
 }
