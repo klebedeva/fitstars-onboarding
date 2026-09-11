@@ -223,13 +223,13 @@ html, body {
   height: 48px;
   border: none;
   border-radius: 50px;
-  background: var(--color-surface-primary);
+  background: var(--general-positive, #08c408);
   box-shadow: var(--shadow-elevation-2);
   font-family: var(--font-family-title);
   font-weight: var(--font-weight-bold);
   font-size: 16px;
   letter-spacing: var(--letter-spacing-broad);
-  color: var(--color-text-primary);
+  color: #fff;
   cursor: pointer;
 }
 
@@ -1241,10 +1241,24 @@ html, body {
 }
 
 /* Social proof */
+.social-proof-transparent {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
 .social-proof-row {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.social-proof-icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
 }
 
 .social-proof-emoji {
@@ -2052,3 +2066,12 @@ html, body {
 .day-summary-macro--protein { background: #d5f1ff; color: #16678f; }
 .day-summary-macro--fat { background: #ffefd7; color: #bc7e20; }
 .day-summary-macro--carbs { background: #defae4; color: #3ba165; }
+
+/* In-flow footer (screen 13 only) — scrolls with content instead of staying fixed */
+.content-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 16px;
+  margin-top: 8px;
+}
